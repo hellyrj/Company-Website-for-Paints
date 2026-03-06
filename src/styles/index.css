@@ -1,23 +1,14 @@
 @import './fonts.css';
 @import './tailwind.css';
 @import './theme.css';
+@import './animations.css';
 
-/* Custom animations */
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.animate-gradient {
-  background-size: 200% 200%;
-  animation: gradient 3s ease infinite;
+/* Professional base styles */
+:root {
+  --color-primary: #2c3e50;
+  --color-secondary: #8b5f56;
+  --color-accent: #16a34a;
+  --color-neutral: #404040;
 }
 
 /* Smooth scroll behavior */
@@ -27,13 +18,55 @@ html {
 
 /* Custom selection colors */
 ::selection {
-  background-color: #3b82f6;
+  background-color: var(--color-primary);
   color: white;
 }
 
 /* Enhanced focus styles */
 button:focus-visible,
 a:focus-visible {
-  outline: 2px solid #3b82f6;
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
+}
+
+/* Professional typography */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: #374151;
+}
+
+/* Consistent heading styles */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  color: #111827;
+}
+
+/* Professional button styles */
+.btn {
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Professional card styles */
+.card {
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Professional form styles */
+input, textarea, select {
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
 }
