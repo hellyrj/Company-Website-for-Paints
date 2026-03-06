@@ -75,23 +75,23 @@ export function Gallery() {
   return (
     <div>
       {/* Header */}
-      <section className="bg-gray-900 text-white py-20">
+      <section className="bg-gray-900 text-white py-20 animate-slide-up">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Project Gallery</h1>
-          <p className="text-xl max-w-3xl mx-auto text-gray-300">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">Project Gallery</h1>
+          <p className="text-xl max-w-3xl mx-auto text-gray-300 animate-slide-up-delay-1">
             Explore our portfolio of professional painting projects and color applications
           </p>
         </div>
       </section>
 
       {/* Category Filter */}
-      <section className="py-8 bg-white border-b border-gray-200">
+      <section className="py-8 bg-white border-b border-gray-200 animate-slide-up-delay-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
               <button
                 key={category}
-                className="px-6 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-900 hover:text-white hover:border-gray-900 transition-colors font-medium"
+                className="px-6 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-900 hover:text-white hover:border-gray-900 transition-colors font-medium btn-animate"
               >
                 {category}
               </button>
@@ -107,14 +107,14 @@ export function Gallery() {
             {galleryImages.map((image) => (
               <div
                 key={image.id}
-                className="group relative overflow-hidden rounded-lg border border-gray-200 bg-white cursor-pointer hover:shadow-lg transition-shadow"
+                className="group relative overflow-hidden rounded-lg border border-gray-200 bg-white cursor-pointer gallery-item"
                 onClick={() => setSelectedImage(image.url)}
               >
                 <div className="aspect-[4/3] overflow-hidden bg-gray-100">
                   <img
                     src={image.url}
                     alt={image.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -142,7 +142,7 @@ export function Gallery() {
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+            <div className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow hover-scale">
               <div className="h-32 flex">
                 <div className="flex-1 bg-gray-800"></div>
                 <div className="flex-1 bg-gray-600"></div>
@@ -155,7 +155,7 @@ export function Gallery() {
               </div>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+            <div className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow hover-scale">
               <div className="h-32 flex">
                 <div className="flex-1 bg-blue-900"></div>
                 <div className="flex-1 bg-blue-700"></div>
@@ -168,7 +168,7 @@ export function Gallery() {
               </div>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+            <div className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow hover-scale">
               <div className="h-32 flex">
                 <div className="flex-1 bg-green-800"></div>
                 <div className="flex-1 bg-green-600"></div>

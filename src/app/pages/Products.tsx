@@ -68,10 +68,10 @@ export function Products() {
   return (
     <div>
       {/* Header */}
-      <section className="bg-gray-900 text-white py-20">
+      <section className="bg-gray-900 text-white py-20 animate-slide-up">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Professional Products</h1>
-          <p className="text-xl max-w-3xl mx-auto text-gray-300">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">Professional Products</h1>
+          <p className="text-xl max-w-3xl mx-auto text-gray-300 animate-slide-up-delay-1">
             Comprehensive range of premium paints and coatings for commercial and residential applications
           </p>
         </div>
@@ -87,9 +87,9 @@ export function Products() {
               return (
                 <div
                   key={category.name}
-                  className="bg-white p-6 border border-gray-200 rounded-lg text-center hover:shadow-lg transition-shadow"
+                  className="bg-white p-6 border border-gray-200 rounded-lg text-center category-card"
                 >
-                  <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center mx-auto mb-4 icon-wrapper">
                     <Icon className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2">{category.name}</h3>
@@ -108,7 +108,7 @@ export function Products() {
             {products.map((product) => (
               <div
                 key={product.id}
-                className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
+                className="bg-white border border-gray-200 rounded-lg overflow-hidden product-card"
               >
                 <div className="h-64 overflow-hidden bg-gray-100">
                   <img
@@ -161,8 +161,8 @@ export function Products() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Why Choose Our Products</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 border border-gray-200 rounded-lg">
-              <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center mb-6">
+            <div className="bg-white p-8 border border-gray-200 rounded-lg feature-card">
+              <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center mb-6 icon-wrapper">
                 <CheckCircle className="h-6 w-6 text-white" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Professional Quality</h3>
@@ -170,8 +170,8 @@ export function Products() {
                 Industry-leading formulations that meet professional standards for durability, coverage, and finish quality.
               </p>
             </div>
-            <div className="bg-white p-8 border border-gray-200 rounded-lg">
-              <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center mb-6">
+            <div className="bg-white p-8 border border-gray-200 rounded-lg feature-card">
+              <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center mb-6 icon-wrapper">
                 <Sparkles className="h-6 w-6 text-white" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Advanced Technology</h3>
@@ -179,8 +179,8 @@ export function Products() {
                 Cutting-edge paint technology ensuring superior performance, longevity, and environmental compliance.
               </p>
             </div>
-            <div className="bg-white p-8 border border-gray-200 rounded-lg">
-              <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center mb-6">
+            <div className="bg-white p-8 border border-gray-200 rounded-lg feature-card">
+              <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center mb-6 icon-wrapper">
                 <Droplet className="h-6 w-6 text-white" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Comprehensive Range</h3>

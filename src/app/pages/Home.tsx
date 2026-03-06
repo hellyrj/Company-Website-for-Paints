@@ -7,7 +7,7 @@ export function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative bg-gray-900">
+      <section className="relative bg-gray-900 animate-slide-up">
         <div className="absolute inset-0">
           <div 
             className="h-full w-full bg-cover bg-center opacity-40"
@@ -19,22 +19,22 @@ export function Home() {
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
           <div className="text-center text-white">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in">
               Premium Paint Solutions for
               <span className="block text-gray-300">Professional Results</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto animate-slide-up-delay-1">
               Trusted by contractors, designers, and homeowners for over 25 years. 
               Superior quality paints and coatings for every project.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up-delay-2">
               <Link to="/products">
-                <Button size="lg" className="bg-white text-gray-900 hover:bg-gray-100 font-semibold">
+                <Button size="lg" className="bg-white text-gray-900 hover:bg-gray-100 font-semibold btn-animate">
                   Explore Products <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-gray-900">
+                <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-gray-900 btn-animate">
                   Get Consultation
                 </Button>
               </Link>
@@ -44,22 +44,22 @@ export function Home() {
       </section>
 
       {/* Trust Indicators */}
-      <section className="bg-gray-50 border-y border-gray-200">
+      <section className="bg-gray-50 border-y border-gray-200 animate-slide-up-delay-3">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
+            <div className="trust-indicator">
               <div className="text-3xl font-bold text-gray-900 mb-2">25+</div>
               <div className="text-gray-600">Years Experience</div>
             </div>
-            <div>
+            <div className="trust-indicator">
               <div className="text-3xl font-bold text-gray-900 mb-2">10K+</div>
               <div className="text-gray-600">Projects Completed</div>
             </div>
-            <div>
+            <div className="trust-indicator">
               <div className="text-3xl font-bold text-gray-900 mb-2">98%</div>
               <div className="text-gray-600">Client Satisfaction</div>
             </div>
-            <div>
+            <div className="trust-indicator">
               <div className="text-3xl font-bold text-gray-900 mb-2">50+</div>
               <div className="text-gray-600">Color Options</div>
             </div>
@@ -78,8 +78,8 @@ export function Home() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 border border-gray-200 rounded-lg">
-              <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center mb-6">
+            <div className="bg-white p-8 border border-gray-200 rounded-lg feature-card">
+              <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center mb-6 icon-wrapper">
                 <Shield className="h-6 w-6 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Premium Quality</h3>
@@ -102,8 +102,8 @@ export function Home() {
               </ul>
             </div>
             
-            <div className="bg-white p-8 border border-gray-200 rounded-lg">
-              <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center mb-6">
+            <div className="bg-white p-8 border border-gray-200 rounded-lg feature-card">
+              <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center mb-6 icon-wrapper">
                 <Award className="h-6 w-6 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Expert Support</h3>
@@ -126,8 +126,8 @@ export function Home() {
               </ul>
             </div>
             
-            <div className="bg-white p-8 border border-gray-200 rounded-lg">
-              <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center mb-6">
+            <div className="bg-white p-8 border border-gray-200 rounded-lg feature-card">
+              <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center mb-6 icon-wrapper">
                 <CheckCircle className="h-6 w-6 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Sustainable Solutions</h3>
@@ -165,7 +165,7 @@ export function Home() {
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {professionalColors.map((color, index) => (
-              <div key={index} className="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+              <div key={index} className="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow color-card">
                 <div 
                   className="h-32 w-full"
                   style={{ backgroundColor: color.hex }}
@@ -191,12 +191,12 @@ export function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
-              <Button size="lg" className="bg-white text-gray-900 hover:bg-gray-100 font-semibold">
+              <Button size="lg" className="bg-white text-gray-900 hover:bg-gray-100 font-semibold btn-animate">
                 Schedule Consultation
               </Button>
             </Link>
             <Link to="/products">
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-gray-900">
+              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-gray-900 btn-animate">
                 View Products
               </Button>
             </Link>
